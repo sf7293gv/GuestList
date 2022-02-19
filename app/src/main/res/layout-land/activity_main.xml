@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/remove_guests_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_guests_button"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_guest_added" />
+
+    <EditText
+        android:id="@+id/new_guest_input"
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/instructions_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_guest_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_guest_button"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button_guest"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/list_of_guests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_guest_input" />
+
+    <TextView
+        android:id="@+id/list_of_guests"
+        android:layout_width="649dp"
+        android:layout_height="198dp"
+        app:layout_constraintBottom_toTopOf="@+id/last_guest_added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_guest_button" />
+
+    <TextView
+        android:id="@+id/last_guest_added"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/remove_guests_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_guests" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
